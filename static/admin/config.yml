@@ -18,3 +18,17 @@ collections:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Image', name: 'image', widget: 'image' }
       - { label: 'Url', name: 'url', widget: 'string' }
+
+  - name: 'work'
+    label: 'Work'
+    folder: 'content/work'
+    format: 'frontmatter'
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Description', name: 'description', widget: 'markdown' }
+      - { label: 'Image', name: 'image', widget: 'image' }
+      - { label: 'Url', name: 'url', widget: 'string' }

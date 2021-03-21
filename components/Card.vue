@@ -1,5 +1,5 @@
 <template>
-  <div class="card px-4 py-4 rounded text-3xl"><slot></slot></div>
+  <div class="card px-4 py-4 rounded"><slot></slot></div>
 </template>
 
 <style scoped>
