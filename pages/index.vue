@@ -29,6 +29,7 @@
           <img
             :src="require('@/assets/icons/github.svg')"
             class="inline-block align-top w-6 mr-2"
+            aria-hidden="true"
           />GitHub
         </a>
         <a
@@ -41,6 +42,7 @@
           <img
             :src="require('@/assets/icons/linkedin.svg')"
             class="inline-block align-top w-6 mr-2"
+            aria-hidden="true"
           />LinkedIn
         </a>
         <a
@@ -51,6 +53,7 @@
           <img
             :src="require('@/assets/icons/at.svg')"
             class="inline-block align-top w-6 mr-2"
+            aria-hidden="true"
           />Email
         </a>
       </div>
@@ -64,8 +67,17 @@
           <h2 class="text-center text-4xl">
             {{ website.title }}
           </h2>
-          <a :href="website.url" target="_blank" rel="noopener">
-            <img class="rounded-xl hover:filter-darken" :src="website.image" />
+          <a
+            :href="website.url"
+            target="_blank"
+            rel="noopener"
+            :aria-label="'Link to ' + website.title"
+          >
+            <img
+              class="rounded-xl hover:filter-darken"
+              :src="website.image"
+              :alt="website.title + ' website screenshot'"
+            />
           </a>
         </card>
       </div>
