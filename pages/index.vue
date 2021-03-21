@@ -1,68 +1,70 @@
 <template>
   <div class="container">
-    <div>
-      <Logo />
-      <h1 class="title">nuxt-olivervorasai</h1>
-      <div class="links">
+    <!-- Navigation -->
+    <nav class="flex justify-center">
+      <a class="nav-btn" href="#project-section">Projects</a>
+      <a class="nav-btn" href="#work-section">Work</a>
+      <a
+        class="nav-btn"
+        href="/Oliver Vorasai Resume.pdf"
+        download
+        target="_blank"
+      >
+        Download Resume
+      </a>
+    </nav>
+
+    <!-- Feature -->
+    <section class="flex flex-col text-center my-12">
+      <h1 class="text-6xl">Oliver Vorasai</h1>
+      <h2 class="text-4xl text-gray-700">Front End Developer</h2>
+      <div class="flex flex-row justify-center">
         <a
-          href="https://nuxtjs.org/"
+          class="outline-btn"
+          href="https://github.com/OliverVorasai"
           target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
+          rel="noopener"
+          aria-label="Github Link"
         >
-          Documentation
+          <fa-icon :icon="['fab', 'github']" class="mr-2"></fa-icon>GitHub
         </a>
         <a
-          href="https://github.com/nuxt/nuxt.js"
+          class="outline-btn"
+          href="https://www.linkedin.com/in/olivervorasai/"
           target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
+          rel="noopener"
+          aria-label="Linkedin Link"
         >
-          GitHub
+          <fa-icon :icon="['fab', 'linkedin']" class="mr-2 linkedin"></fa-icon
+          >LinkedIn
+        </a>
+        <a
+          class="outline-btn"
+          href="mailto:olivervorasai@gmail.com"
+          aria-label="Email Link"
+        >
+          <fa-icon :icon="['fas', 'at']" class="mr-2"></fa-icon>Email
         </a>
       </div>
-    </div>
+    </section>
   </div>
 </template>
 
-<script>
-export default {}
-</script>
-
-<style>
-/* Sample `apply` at-rules with Tailwind CSS
-.container {
-@apply min-h-screen flex justify-center items-center text-center mx-auto;
+<style scoped lang="postcss">
+.nav-btn {
+  @apply py-2 px-2 m-1 rounded;
 }
-*/
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+.nav-btn:hover {
+  @apply text-blue-500 bg-gray-300;
+}
+.outline-btn {
+  @apply py-2 px-4 mx-1 my-4 rounded border;
+}
+.outline-btn:hover {
+  @apply border-gray-700;
 }
 
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
+.linkedin {
+  color: #2867b2;
 }
 </style>
