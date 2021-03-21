@@ -2,7 +2,7 @@
   <div class="container px-2">
     <!-- Feature -->
     <section class="flex flex-col text-center my-12">
-      <h1 class="text-6xl">Oliver Vorasai</h1>
+      <h1 class="text-6xl leading-none md:leading-normal">Oliver Vorasai</h1>
       <h2 class="text-4xl text-gray-700">Front End Developer</h2>
       <div class="flex flex-row justify-center">
         <a
