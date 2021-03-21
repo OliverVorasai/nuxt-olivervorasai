@@ -102,9 +102,7 @@
 <script>
 export default {
   async asyncData({ $content }) {
-    const websites = await $content('websites')
-      .sortBy('createdAt', 'desc')
-      .fetch()
+    const websites = await $content('websites').sortBy('rank', 'asc').fetch()
     const work = await $content('work').sortBy('createdAt', 'desc').fetch()
 
     return { websites, work }
