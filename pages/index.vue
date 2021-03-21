@@ -1,19 +1,5 @@
 <template>
   <div class="container px-2">
-    <!-- Navigation -->
-    <nav class="flex justify-center">
-      <a class="nav-btn" href="#websites-section">Websites</a>
-      <a class="nav-btn" href="#work-section">Work</a>
-      <a
-        class="nav-btn"
-        href="/Oliver Vorasai Resume.pdf"
-        download
-        target="_blank"
-      >
-        Download Resume
-      </a>
-    </nav>
-
     <!-- Feature -->
     <section class="flex flex-col text-center my-12">
       <h1 class="text-6xl">Oliver Vorasai</h1>
@@ -110,9 +96,6 @@
         </a>
       </div>
     </section>
-
-    <!-- Footer -->
-    <section></section>
   </div>
 </template>
 
@@ -130,13 +113,7 @@ export default {
 </script>
 
 <style scoped lang="postcss">
-/* Styles for buttons */
-.nav-btn {
-  @apply py-2 px-2 m-1 rounded;
-}
-.nav-btn:hover {
-  @apply text-blue-500 bg-gray-300;
-}
+/* Styles for button links */
 .outline-btn {
   @apply py-2 px-4 mx-1 my-4 rounded border;
 }

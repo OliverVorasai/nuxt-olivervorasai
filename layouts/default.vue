@@ -1,6 +1,33 @@
 <template>
   <div>
+    <!-- Navigation -->
+    <nav class="flex justify-center">
+      <a
+        class="nav-btn"
+        href="#websites-section"
+        aria-label="Jump to websites section"
+        >Websites</a
+      >
+      <a class="nav-btn" href="#work-section" aria-label="Jump to work section"
+        >Work</a
+      >
+      <a
+        class="nav-btn"
+        href="/Oliver Vorasai Resume.pdf"
+        download
+        target="_blank"
+      >
+        Download Resume
+      </a>
+    </nav>
     <Nuxt />
+    <footer class="flex justify-center border-t-2 h-16">
+      <div class="self-center text-2xl font-light">
+        <p>
+          &copy;{{ new Date().getFullYear() }} — <strong>Oliver Vorasai</strong>
+        </p>
+      </div>
+    </footer>
   </div>
 </template>
 
@@ -23,33 +50,14 @@ html {
   box-sizing: border-box;
   margin: 0;
 }
+</style>
 
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
+<style scoped lang="postcss">
+/* Styles for nav buttons */
+.nav-btn {
+  @apply py-2 px-2 m-1 rounded;
 }
-
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
-}
-
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
-}
-
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
+.nav-btn:hover {
+  @apply text-blue-500 bg-gray-300;
 }
 </style>
