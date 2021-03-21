@@ -97,7 +97,11 @@
         >
           <div>
             <h2 class="text-center text-4xl text-white">{{ job.title }}</h2>
-            <img class="rounded-xl h-24 mx-auto my-6" :src="job.image" />
+            <img
+              class="rounded-xl h-24 mx-auto my-6"
+              :src="job.image"
+              :alt="'Icon for ' + job.title"
+            />
             <nuxt-content
               :document="job"
               class="text-center text-xl font-light text-white"
