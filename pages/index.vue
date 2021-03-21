@@ -53,10 +53,12 @@
 
     <!-- Websites -->
     <section id="websites-section" class="my-12">
-      <h1 class="text-5xl mx-2">Websites</h1>
-      <div class="grid grid-cols-2 gap-4">
+      <h1 class="text-5xl mx-2 font-semibold">Websites</h1>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <card v-for="(website, index) in websites" :key="index">
-          <h2 class="text-center text-3xl">{{ website.title }}</h2>
+          <h2 class="text-center text-4xl">
+            {{ website.title }}
+          </h2>
           <a :href="website.url" target="_blank" rel="noopener">
             <img class="rounded-xl hover:filter-darken" :src="website.image" />
           </a>
@@ -66,7 +68,7 @@
 
     <!-- Work -->
     <section id="work-section" class="my-12">
-      <h1 class="text-5xl mx-2">Work</h1>
+      <h1 class="text-5xl mx-2 font-semibold">Work</h1>
       <div class="grid grid-cols-1 md:grid-cols-2">
         <a
           v-for="(job, index) in work"
