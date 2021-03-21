@@ -3,3 +3,12 @@
 @tailwind components;
 
 @tailwind utilities;
+
+@layer utilities {
+  @variants hover {
+    .filter-darken {
+      transition: all 250ms ease;
+      filter: brightness(75%);
+    }
+  }
+}

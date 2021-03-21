@@ -1,8 +1,8 @@
 <template>
-  <div class="container">
+  <div class="container px-2">
     <!-- Navigation -->
     <nav class="flex justify-center">
-      <a class="nav-btn" href="#project-section">Projects</a>
+      <a class="nav-btn" href="#websites-section">Websites</a>
       <a class="nav-btn" href="#work-section">Work</a>
       <a
         class="nav-btn"
@@ -35,7 +35,10 @@
           rel="noopener"
           aria-label="Linkedin Link"
         >
-          <fa-icon :icon="['fab', 'linkedin']" class="mr-2 linkedin"></fa-icon
+          <fa-icon
+            :icon="['fab', 'linkedin']"
+            class="mr-2 text-blue-700"
+          ></fa-icon
           >LinkedIn
         </a>
         <a
@@ -47,8 +50,35 @@
         </a>
       </div>
     </section>
+
+    <!-- Websites -->
+    <section id="websites-section">
+      <h1 class="text-5xl mx-2">Websites</h1>
+      <div class="grid grid-cols-2 gap-4">
+        <card v-for="(website, index) in websites" :key="index">
+          <h2 class="text-center">{{ website.title }}</h2>
+          <a :href="website.url" target="_blank" rel="noopener">
+            <img class="rounded-xl hover:filter-darken" :src="website.image" />
+          </a>
+        </card>
+      </div>
+    </section>
+
+    <!-- Work -->
   </div>
 </template>
+
+<script>
+export default {
+  async asyncData({ $content }) {
+    const websites = await $content('websites')
+      .sortBy('createdAt', 'desc')
+      .fetch()
+
+    return { websites }
+  },
+}
+</script>
 
 <style scoped lang="postcss">
 .nav-btn {
@@ -62,9 +92,5 @@
 }
 .outline-btn:hover {
   @apply border-gray-700;
-}
-
-.linkedin {
-  color: #2867b2;
 }
 </style>
