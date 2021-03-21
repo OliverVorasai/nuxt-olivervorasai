@@ -26,7 +26,10 @@
           rel="noopener"
           aria-label="Github Link"
         >
-          <fa-icon :icon="['fab', 'github']" class="mr-2"></fa-icon>GitHub
+          <img
+            :src="require('@/assets/icons/github.svg')"
+            class="inline-block align-top w-6 mr-2"
+          />GitHub
         </a>
         <a
           class="outline-btn"
@@ -35,18 +38,20 @@
           rel="noopener"
           aria-label="Linkedin Link"
         >
-          <fa-icon
-            :icon="['fab', 'linkedin']"
-            class="mr-2 text-blue-700"
-          ></fa-icon
-          >LinkedIn
+          <img
+            :src="require('@/assets/icons/linkedin.svg')"
+            class="inline-block align-top w-6 mr-2"
+          />LinkedIn
         </a>
         <a
           class="outline-btn"
           href="mailto:olivervorasai@gmail.com"
           aria-label="Email Link"
         >
-          <fa-icon :icon="['fas', 'at']" class="mr-2"></fa-icon>Email
+          <img
+            :src="require('@/assets/icons/at.svg')"
+            class="inline-block align-top w-6 mr-2"
+          />Email
         </a>
       </div>
     </section>
