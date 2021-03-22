@@ -87,6 +87,7 @@
               class="rounded-xl h-24 mx-auto my-6"
               :src="job.image"
               :alt="'Icon for ' + job.title"
+              loading="lazy"
             />
             <nuxt-content
               :document="job"
