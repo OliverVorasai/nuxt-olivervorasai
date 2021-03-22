@@ -5,43 +5,21 @@
       <h1 class="text-6xl leading-none md:leading-normal">Oliver Vorasai</h1>
       <p class="text-4xl text-gray-700">Front End Developer</p>
       <div class="flex flex-row justify-center">
-        <a
-          class="outline-btn"
-          href="https://github.com/OliverVorasai"
-          target="_blank"
-          rel="noopener"
-          aria-label="Github Link"
-        >
-          <img
-            :src="require('@/assets/icons/github.svg')"
-            class="inline-block align-top w-6 mr-2"
-            aria-hidden="true"
-          />GitHub
-        </a>
-        <a
-          class="outline-btn"
-          href="https://www.linkedin.com/in/olivervorasai/"
-          target="_blank"
-          rel="noopener"
-          aria-label="Linkedin Link"
-        >
-          <img
-            :src="require('@/assets/icons/linkedin.svg')"
-            class="inline-block align-top w-6 mr-2"
-            aria-hidden="true"
-          />LinkedIn
-        </a>
-        <a
-          class="outline-btn"
-          href="mailto:olivervorasai@gmail.com"
-          aria-label="Email Link"
-        >
-          <img
-            :src="require('@/assets/icons/at.svg')"
-            class="inline-block align-top w-6 mr-2"
-            aria-hidden="true"
-          />Email
-        </a>
+        <external-button
+          text="Github"
+          :icon="require('@/assets/icons/github.svg')"
+          link="https://github.com/OliverVorasai"
+        ></external-button>
+        <external-button
+          text="LinkedIn"
+          :icon="require('@/assets/icons/linkedin.svg')"
+          link="https://www.linkedin.com/in/olivervorasai/"
+        ></external-button>
+        <external-button
+          text="Email"
+          :icon="require('@/assets/icons/at.svg')"
+          link="mailto:olivervorasai@gmail.com"
+        ></external-button>
       </div>
     </section>
 
@@ -112,14 +90,6 @@ export default {
 </script>
 
 <style scoped lang="postcss">
-/* Styles for button links */
-.outline-btn {
-  @apply py-2 px-4 mx-1 my-4 rounded border;
-}
-.outline-btn:hover {
-  @apply border-gray-700;
-}
-
 /* Styles for work section */
 .cell:nth-child(1) {
   @apply rounded-t-xl;
