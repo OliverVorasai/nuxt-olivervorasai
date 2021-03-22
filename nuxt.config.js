@@ -2,6 +2,11 @@ export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
+  render: {
+    // Remove all Javascript: https://nuxtjs.org/docs/2.x/configuration-glossary/configuration-render/#injectscripts
+    injectScripts: false,
+  },
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'Oliver Vorasai',
