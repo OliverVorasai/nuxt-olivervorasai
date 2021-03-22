@@ -32,7 +32,7 @@ export default {
 
 <style scoped lang="postcss">
 .outline-btn {
-  @apply flex gap-2 px-2 items-center py-1 mx-1 my-4 rounded border;
+  @apply flex gap-2 items-center px-2 py-1 mx-1 my-4 rounded border;
   @screen md {
     @apply px-4 py-2;
   }
