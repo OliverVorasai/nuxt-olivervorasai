@@ -3,7 +3,7 @@
     <!-- Feature -->
     <section class="flex flex-col text-center my-12">
       <h1 class="text-6xl leading-none md:leading-normal">Oliver Vorasai</h1>
-      <h2 class="text-4xl text-gray-700">Front End Developer</h2>
+      <p class="text-4xl text-gray-700">Front End Developer</p>
       <div class="flex flex-row justify-center">
         <a
           class="outline-btn"
@@ -47,12 +47,12 @@
 
     <!-- Websites -->
     <section id="websites-section" class="my-12">
-      <h1 class="text-5xl mx-2 font-semibold">Websites</h1>
+      <h2 class="text-5xl mx-2 font-semibold">Websites</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <card v-for="(website, index) in websites" :key="index">
-          <h2 class="text-center text-4xl">
+          <h3 class="text-center text-4xl">
             {{ website.title }}
-          </h2>
+          </h3>
           <a
             :href="website.url"
             target="_blank"
@@ -71,7 +71,7 @@
 
     <!-- Work -->
     <section id="work-section" class="my-12">
-      <h1 class="text-5xl mx-2 font-semibold">Work</h1>
+      <h2 class="text-5xl mx-2 font-semibold">Work</h2>
       <div class="grid grid-cols-1 md:grid-cols-2">
         <a
           v-for="(job, index) in work"
@@ -82,7 +82,7 @@
           class="cell hover:filter-darken px-12 py-12"
         >
           <div>
-            <h2 class="text-center text-4xl text-white">{{ job.title }}</h2>
+            <h3 class="text-center text-4xl text-white">{{ job.title }}</h3>
             <img
               class="rounded-xl h-24 mx-auto my-6"
               :src="job.image"
