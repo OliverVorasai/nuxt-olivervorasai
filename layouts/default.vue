@@ -6,11 +6,14 @@
         class="nav-btn"
         href="#websites-section"
         aria-label="Jump to websites section"
-        >Websites</a
       >
-      <a class="nav-btn" href="#work-section" aria-label="Jump to work section"
-        >Work</a
-      >
+        Websites
+      </a>
+
+      <a class="nav-btn" href="#work-section" aria-label="Jump to work section">
+        Work
+      </a>
+
       <a
         class="nav-btn"
         href="/Oliver Vorasai Resume.pdf"
@@ -20,13 +23,13 @@
         Download Resume
       </a>
     </nav>
+
     <Nuxt />
-    <footer class="flex justify-center border-t-2 h-16">
-      <div class="self-center text-2xl font-light">
-        <p>
-          &copy;{{ new Date().getFullYear() }} — <strong>Oliver Vorasai</strong>
-        </p>
-      </div>
+
+    <footer>
+      <p>
+        &copy;{{ new Date().getFullYear() }} — <strong>Oliver Vorasai</strong>
+      </p>
     </footer>
   </div>
 </template>
@@ -52,12 +55,24 @@ html {
 }
 </style>
 
-<style scoped lang="postcss">
-/* Styles for nav buttons */
+<style lang="postcss" scoped>
 .nav-btn {
-  @apply py-2 px-2 m-1 rounded;
+  padding: 0.5rem;
+  margin: 0.25rem;
+  border-radius: 0.25rem;
 }
 .nav-btn:hover {
-  @apply text-blue-500 bg-gray-300;
+  color: #4299e1;
+  background-color: #e2e8f0;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+  border-top-width: 2px;
+  font-size: 1.5rem;
+  font-weight: 300;
 }
 </style>
