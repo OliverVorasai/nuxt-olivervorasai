@@ -13,15 +13,6 @@
       <a class="nav-btn" href="#work-section" aria-label="Jump to work section">
         Work
       </a>
-
-      <a
-        class="nav-btn"
-        href="/Oliver Vorasai Resume.pdf"
-        download
-        target="_blank"
-      >
-        Download Resume
-      </a>
     </nav>
 
     <Nuxt />
