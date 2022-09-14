@@ -1,25 +1,28 @@
 <template>
-  <div class="container px-2">
+  <div class="page-index">
     <!-- Feature -->
-    <section class="flex flex-col text-center my-12">
-      <h1 class="text-6xl leading-none md:leading-normal">Oliver Vorasai</h1>
-      <p class="text-4xl text-gray-700">Front End Developer</p>
-      <div class="flex flex-row justify-center">
-        <external-button
+    <section class="hero-section">
+      <h1>Oliver Vorasai</h1>
+      <p>Front End Developer</p>
+
+      <div class="external-buttons">
+        <ExternalButton
           text="Github"
           :icon="require('@/assets/icons/github.svg')"
           link="https://github.com/OliverVorasai"
-        ></external-button>
-        <external-button
+        />
+
+        <ExternalButton
           text="LinkedIn"
           :icon="require('@/assets/icons/linkedin.svg')"
           link="https://www.linkedin.com/in/olivervorasai/"
-        ></external-button>
-        <external-button
+        />
+
+        <ExternalButton
           text="Email"
           :icon="require('@/assets/icons/at.svg')"
           link="mailto:olivervorasai@gmail.com"
-        ></external-button>
+        />
       </div>
     </section>
 
@@ -89,7 +92,33 @@ export default {
 }
 </script>
 
-<style scoped lang="postcss">
+<style lang="postcss" scoped>
+.page-index {
+  max-width: 1280px;
+  padding: 0 0.5rem;
+  margin: 0 auto;
+}
+
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 3rem 0;
+
+  & h1 {
+    font-size: 3rem;
+  }
+
+  & p {
+    font-size: 2.25rem;
+    opacity: 0.55;
+  }
+
+  & .external-buttons {
+    display: flex;
+  }
+}
+
 /* Styles for work section */
 .cell:nth-child(1) {
   @apply rounded-t-xl;
